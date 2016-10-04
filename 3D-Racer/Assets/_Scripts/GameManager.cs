@@ -3,15 +3,23 @@ using System.Collections;
 
 public class GameManager : MonoBehaviour
 {
+  public static GameManager control = null;
+  AudioSource backgroundMusic;
+
   public bool muted = false;
   public AudioClip[] musicbg;
-  AudioSource backgroundMusic;
 
   private int i;
 
-
 	void Awake ()
   {
+    if (control == null)
+    {
+      control = this;
+    } else if (control != this) {
+      Destroy(gameObject);
+    }
+
     DontDestroyOnLoad(gameObject);
     backgroundMusic = GetComponent <AudioSource> ();
 	}
