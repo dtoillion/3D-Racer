@@ -164,7 +164,7 @@ namespace UnityStandardAssets.Vehicles.Car
             source.clip = clip;
             source.volume = 0;
             source.loop = true;
-            source.spatialBlend = 1f;
+            source.spatialBlend = 0.5f;
 
             // start the clip from a random point
             source.time = Random.Range(0f, clip.length);
