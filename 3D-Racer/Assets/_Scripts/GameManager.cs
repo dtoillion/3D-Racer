@@ -5,9 +5,17 @@ public class GameManager : MonoBehaviour
 {
   public static GameManager control = null;
   AudioSource backgroundMusic;
-
-  public bool muted = false;
   public AudioClip[] musicbg;
+  public bool muted = false;
+  public bool Trophy01;
+  public bool Trophy02;
+  public bool Trophy03;
+  public bool Trophy04;
+  public bool Trophy05;
+  public bool Trophy06;
+  public bool Trophy07;
+  public bool Trophy08;
+  public bool Trophy09;
 
   private int i;
 
@@ -19,7 +27,6 @@ public class GameManager : MonoBehaviour
     } else if (control != this) {
       Destroy(gameObject);
     }
-
     DontDestroyOnLoad(gameObject);
     backgroundMusic = GetComponent <AudioSource> ();
 	}

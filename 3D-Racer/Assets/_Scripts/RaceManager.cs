@@ -63,9 +63,33 @@ public class RaceManager : MonoBehaviour
     // end race when laps is reached and all checkpoints cleared
     if((checkpointsCleared == checkpointsPerLap) && (currentLap == laps))
     {
+
       racing = false;
       endRace.SetActive(true);
       endRaceText.text = RaceManager.control.time.ToString("00:00.00");
+      raceCar1.isKinematic = true;
+      raceCar2.isKinematic = true;
+      raceCar3.isKinematic = true;
+      raceCar4.isKinematic = true;
+      Scene scene = SceneManager.GetActiveScene();
+      if(scene.buildIndex == 1)
+        GameManager.control.Trophy01 = true;
+      if(scene.buildIndex == 2)
+        GameManager.control.Trophy02 = true;
+      if(scene.buildIndex == 3)
+        GameManager.control.Trophy03 = true;
+      if(scene.buildIndex == 4)
+        GameManager.control.Trophy04 = true;
+      if(scene.buildIndex == 5)
+        GameManager.control.Trophy05 = true;
+      if(scene.buildIndex == 6)
+        GameManager.control.Trophy06 = true;
+      if(scene.buildIndex == 7)
+        GameManager.control.Trophy07 = true;
+      if(scene.buildIndex == 8)
+        GameManager.control.Trophy08 = true;
+      if(scene.buildIndex == 9)
+        GameManager.control.Trophy09 = true;
     }
   }
 
