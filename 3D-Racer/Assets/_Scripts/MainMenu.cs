@@ -44,22 +44,6 @@ public class MainMenu : MonoBehaviour
     if(GameManager.control.Trophy06)
     {
       Trophies[5].SetActive(true);
-      LevelButtons[6].interactable = true;
-    }
-    if(GameManager.control.Trophy07)
-    {
-      Trophies[6].SetActive(true);
-      LevelButtons[7].interactable = true;
-    }
-    if(GameManager.control.Trophy08)
-    {
-      Trophies[7].SetActive(true);
-      LevelButtons[8].interactable = true;
-    }
-    if(GameManager.control.Trophy09)
-    {
-      Trophies[8].SetActive(true);
-      LevelButtons[9].interactable = true;
     }
   }
 

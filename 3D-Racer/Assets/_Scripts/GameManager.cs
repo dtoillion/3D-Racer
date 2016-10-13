@@ -13,9 +13,6 @@ public class GameManager : MonoBehaviour
   public bool Trophy04;
   public bool Trophy05;
   public bool Trophy06;
-  public bool Trophy07;
-  public bool Trophy08;
-  public bool Trophy09;
 
   private int i;
 

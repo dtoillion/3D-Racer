@@ -84,12 +84,6 @@ public class RaceManager : MonoBehaviour
         GameManager.control.Trophy05 = true;
       if(scene.buildIndex == 6)
         GameManager.control.Trophy06 = true;
-      if(scene.buildIndex == 7)
-        GameManager.control.Trophy07 = true;
-      if(scene.buildIndex == 8)
-        GameManager.control.Trophy08 = true;
-      if(scene.buildIndex == 9)
-        GameManager.control.Trophy09 = true;
     }
   }
 
