@@ -16,9 +16,6 @@ public class RaceManager : MonoBehaviour
   public Text startTimerText;
   public GameObject[] checkpoints;
   public Rigidbody raceCar1;
-  public Rigidbody raceCar2;
-  public Rigidbody raceCar3;
-  public Rigidbody raceCar4;
 
   public float laps = 3f;
   public float currentLap = 1f;
@@ -31,10 +28,7 @@ public class RaceManager : MonoBehaviour
   {
     control = this;
     raceCar1.isKinematic = true;
-    raceCar2.isKinematic = true;
-    raceCar3.isKinematic = true;
-    raceCar4.isKinematic = true;
-	}
+  }
 
   void Start ()
   {
@@ -68,9 +62,6 @@ public class RaceManager : MonoBehaviour
       endRace.SetActive(true);
       endRaceText.text = RaceManager.control.time.ToString("00:00.00");
       raceCar1.isKinematic = true;
-      raceCar2.isKinematic = true;
-      raceCar3.isKinematic = true;
-      raceCar4.isKinematic = true;
       Scene scene = SceneManager.GetActiveScene();
       if(scene.buildIndex == 1)
         GameManager.control.Trophy01 = true;
@@ -95,9 +86,6 @@ public class RaceManager : MonoBehaviour
     startTimerText.text = "GO!";
     racing = true;
     raceCar1.isKinematic = false;
-    raceCar2.isKinematic = false;
-    raceCar3.isKinematic = false;
-    raceCar4.isKinematic = false;
     StartCoroutine("RaceTimer");
     yield return new WaitForSeconds (1);
     startTimer.SetActive(false);
