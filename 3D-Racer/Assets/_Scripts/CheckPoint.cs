@@ -6,7 +6,7 @@ public class CheckPoint : MonoBehaviour
 
   void OnTriggerEnter(Collider trig)
   {
-    if(trig.gameObject.tag == "Player")
+    if(trig.gameObject.tag == "PlayerColliders")
     {
       RaceManager.control.checkpointsCleared++;
       RaceManager.control.ResetLaps();

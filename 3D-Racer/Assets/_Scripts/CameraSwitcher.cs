@@ -20,10 +20,6 @@ public class CameraSwitcher : MonoBehaviour
     {
       switchCameras(2);
     }
-    else if (Input.GetKeyDown("4") && cameras[3] != null)
-    {
-      switchCameras(3);
-    }
 	}
 
   private void switchCameras(int keyNum)
